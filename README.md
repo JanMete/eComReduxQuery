@@ -1,1 +1,1 @@
-Aby odpalić live trzeba pobrać oba foldery, oba z nich otworzyć w osobnych terminalach i w obu użyć "npm run dev"
+Aby odpalić live trzeba pobrać oba foldery, oba z nich otworzyć w osobnych terminalach i w obu użyć "npm run dev". Mam obecnie problem z redirectem w logice React Query i trzeba przejść an http://localhost:5173/kobieta aby zobaczyć homepage
