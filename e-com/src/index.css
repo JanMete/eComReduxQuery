@@ -1,0 +1,15 @@
+:root {
+  --primaryColor: rgb(0, 162, 255);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}

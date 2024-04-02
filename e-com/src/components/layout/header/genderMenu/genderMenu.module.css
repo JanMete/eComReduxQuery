@@ -1,0 +1,7 @@
+.genderList {
+  display: flex;
+  gap: 1rem;
+}
+a:global(.active) {
+  text-decoration: underline;
+}
