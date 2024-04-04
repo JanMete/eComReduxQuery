@@ -1,6 +1,6 @@
 import { ProductTypes } from '../../types/productTypes';
 import Product from '../product/Product';
-import styles from './products.module.css';
+import styles from './bestsellers.module.css';
 
 type ProductsProps = {
   bestsellers: ProductTypes[];
