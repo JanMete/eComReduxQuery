@@ -1,0 +1,13 @@
+.expandableContainer {
+  margin-right: 3rem;
+}
+.expandableContainer li {
+  margin: 0.2rem;
+}
+.expandableContainer p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.subcategoryContainer {
+  margin-left: 20px;
+}

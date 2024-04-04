@@ -1,0 +1,10 @@
+.breadcrumbContainer {
+  margin-bottom: 1rem;
+}
+.breadcrumbContainer ul {
+  display: flex;
+  gap: 1rem;
+}
+a:global(.active) {
+  text-decoration: underline;
+}

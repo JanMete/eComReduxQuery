@@ -1,15 +1,15 @@
 export const GENDERS = [
   {
     genderName: 'Kobieta',
-    path: '/kobieta',
+    path: 'kobieta',
   },
   {
     genderName: 'Mężczyzna',
-    path: '/mezczyzna',
+    path: 'mezczyzna',
   },
   {
     genderName: 'Dziecko',
-    path: '/dziecko',
+    path: 'dziecko',
   },
 ];
 

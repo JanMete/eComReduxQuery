@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { GENDERS } from '../../../../constants/categories';
+import { GENDERS } from '../../constants/categories';
 import style from './genderMenu.module.css';
 
 export default function GenderMenu() {

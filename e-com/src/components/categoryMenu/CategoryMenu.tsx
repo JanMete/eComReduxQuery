@@ -1,5 +1,5 @@
-import { Link, useParams } from 'react-router-dom';
-import { CATEGORIES } from '../../../constants/categories';
+import { NavLink, useParams } from 'react-router-dom';
+import { CATEGORIES } from '../../constants/categories';
 import style from './categoryMenu.module.css';
 export default function CategoryMenu() {
   const params = useParams();
@@ -9,9 +9,9 @@ export default function CategoryMenu() {
         {CATEGORIES.map((category) => {
           return (
             <li key={category.categoryName}>
-              <Link to={`${params.gender}/${category.path}`}>
+              <NavLink to={`${params.gender}/${category.path}`}>
                 {category.categoryName}
-              </Link>
+              </NavLink>
             </li>
           );
         })}
