@@ -4,8 +4,12 @@ import style from './breadcrumbs.module.css';
 
 export default function Breadcrumbs() {
   const { gender, category, subcategory } = useParams();
+
+  //TODO nie nazywamy zmiennych jednoliterowo raczej, dla czytelnosci (czaem w evencie daje sie e i max tyle bym został).
   const foundGender = GENDERS.find((g) => g.path === gender);
   const foundCategory = CATEGORIES.find((c) => c.path === category);
+
+  //TODO zamknij to w funkcji, która zwroci w zaleznosci od kategorii lub subkategorii odpowieni breadcrumb
   const breadcrumbs = [
     {
       categoryName: foundGender?.genderName,

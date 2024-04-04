@@ -19,6 +19,7 @@ export default function ExpandableMenu() {
               <NavLink to={`/${params.gender}/${category.path}`}>
                 {category.categoryName}
               </NavLink>
+              {/*  duzo tu się dzieje jak na render, mapujes raz po kategriach, potem po subkategoriach - uprość to ;) idealny render powinien byc taki że wchodzisz i czytasz co się dzieje bez rozczytywania skomplikowanego kodu*/}
               {activePath === category.path && (
                 <ul className={style.subcategoryContainer}>
                   {category.subcategories.map((subcategory) => {

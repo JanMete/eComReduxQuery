@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /*jak juz uzywasz zmiennych css czy innych to staraj się ich uzywać w całej apce - ja wiem że black i white niby wydaje się że beda takie zawsze ale zdzwiszisz się ile odcieni black/white można dać - i potem jeżeli lecisz tak jak tu zmieniasz ręcznie w całej apce*/
   background-color: black;
   color: white;
   position: absolute;

@@ -10,6 +10,8 @@
   display: flex;
   gap: 1rem;
 }
+
+/*//todo nie styluj po tagach, dawaj klasy - opowiem czemu - uwaga do calosci apki*/
 .categoryMenuMainContainer ul li a {
   color: white;
 }
