@@ -1,8 +1,8 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { BACK_END_URL } from '../../constants/api';
-import { redirect, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import { CATEGORIES } from '../../constants/categories';
+import { CATEGORIES, GENDERS } from '../../constants/categories';
 import ExpandableMenu from '../../components/expandableMenu/ExpandableMenu';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import FlexContainer from '../../components/flexContainer/FlexContainer';
@@ -13,6 +13,7 @@ import { PATH_TO_ENDPOINT_MAPPING } from '../../utils/mappers';
 export default function ProductList() {
   const { gender, category, subcategory } = useParams<UseParamsTypes>();
   const queryClient = useQueryClient();
+  const navigate = useNavigate();
 
   const ProductListData = useQuery({
     queryKey: ['ProductListLoader'],
@@ -32,7 +33,8 @@ export default function ProductList() {
         if (foundSubcategory) {
           url = `${url}&subcategory=${subcategory}`;
         } else {
-          return redirect('/kobieta');
+          navigate(`/${GENDERS[0].path}`);
+          queryClient.invalidateQueries(['ProductListLoader']);
         }
       }
       const fetchedData = await axios.get(url);
