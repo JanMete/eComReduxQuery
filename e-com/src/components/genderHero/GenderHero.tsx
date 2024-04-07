@@ -1,10 +1,10 @@
-import style from './hero.module.css';
+import style from './genderHero.module.css';
 
 type heroParams = {
   heroImageUrl: string;
 };
 
-export default function Hero({ heroImageUrl }: heroParams) {
+export default function GenderHero({ heroImageUrl }: heroParams) {
   return (
     <div
       className={style.heroMainContainer}

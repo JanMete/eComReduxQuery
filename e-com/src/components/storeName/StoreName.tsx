@@ -1,5 +1,10 @@
+import { Link } from 'react-router-dom';
 import style from './storeName.module.css';
 
 export default function StoreName() {
-  return <h1 className={style.storeName}>Store name</h1>;
+  return (
+    <h1 className={style.storeName}>
+      <Link to={'/'}>Store Name</Link>
+    </h1>
+  );
 }

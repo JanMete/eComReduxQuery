@@ -10,7 +10,7 @@ export default function Products({ products }: ProductsTypes) {
   return (
     <div className={style.productsMainContainer}>
       {products.map((product: ProductTypes) => {
-        return <Product product={product} />;
+        return <Product key={product.id} product={product} />;
       })}
     </div>
   );

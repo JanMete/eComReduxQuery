@@ -25,7 +25,6 @@ export default function Breadcrumbs() {
       path: `/${foundGender?.path}/${foundCategory?.path}/${foundSubcategory?.path}`,
     });
   }
-  console.log(breadcrumbs);
 
   return (
     <div className={style.breadcrumbContainer}>

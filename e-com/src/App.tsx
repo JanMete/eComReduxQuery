@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import CategoryMenu from './components/categoryMenu/CategoryMenu';
 import CurrencySelector from './components/currencySelector/CurrencySelector';
 import GenderMenu from './components/genderMenu/GenderMenu';
@@ -8,6 +8,8 @@ import StoreName from './components/storeName/StoreName';
 import Footer from './components/footer/Footer';
 
 export default function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   return (
     <>
       <Header>
@@ -18,7 +20,7 @@ export default function App() {
           <IconsMenu />
         </div>
       </Header>
-      <CategoryMenu />
+      {!isHomePage && <CategoryMenu />}
       <Outlet />
       <Footer />
     </>
