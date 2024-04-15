@@ -1,3 +1,5 @@
 .icon {
   margin-left: 1rem;
+  color: var(--blackColor);
+  cursor: pointer;
 }

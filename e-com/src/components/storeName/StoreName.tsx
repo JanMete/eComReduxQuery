@@ -4,7 +4,9 @@ import style from './storeName.module.css';
 export default function StoreName() {
   return (
     <h1 className={style.storeName}>
-      <Link to={'/'}>Store Name</Link>
+      <Link className={style.storeNameLink} to={'/'}>
+        Store Name
+      </Link>
     </h1>
   );
 }

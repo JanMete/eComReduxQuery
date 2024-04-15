@@ -11,11 +11,11 @@ export default function ExpandableMenu() {
 
   return (
     <div className={style.expandableContainer}>
-      <p>{genderName}</p>
+      <p className={style.expandableMenuParagraph}>{genderName}</p>
       <ul>
         {CATEGORIES.map((category) => {
           return (
-            <li key={category.path}>
+            <li className={style.expandableMenuListItem} key={category.path}>
               <NavLink to={`/${params.gender}/${category.path}`}>
                 {category.categoryName}
               </NavLink>
@@ -23,7 +23,10 @@ export default function ExpandableMenu() {
                 <ul className={style.subcategoryContainer}>
                   {category.subcategories.map((subcategory) => {
                     return (
-                      <li key={subcategory.path}>
+                      <li
+                        className={style.expandableMenuListItem}
+                        key={subcategory.path}
+                      >
                         <NavLink
                           to={`/${params.gender}/${params.category}/${subcategory.path}`}
                         >

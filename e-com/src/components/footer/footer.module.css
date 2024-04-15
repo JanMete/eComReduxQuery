@@ -3,8 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  color: white;
-  position: absolute;
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
   width: 100%;
 }

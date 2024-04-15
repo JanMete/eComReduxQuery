@@ -13,7 +13,7 @@ export default function GenderHero({ heroImageUrl }: heroParams) {
       <div className={style.promotionContainer}>
         <h2>Letnie promocje do -70%!</h2>
         <p>Tylko najlepsze okazje!</p>
-        <button>SPRAWDŹ PRODUKTY</button>
+        <button className={style.heroButton}>SPRAWDŹ PRODUKTY</button>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 .expandableContainer {
   margin-right: 3rem;
 }
-.expandableContainer li {
+.expandableMenuListItem {
   margin: 0.2rem;
 }
-.expandableContainer p {
+.expandableMenuParagraph {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }

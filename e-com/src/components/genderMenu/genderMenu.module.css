@@ -2,6 +2,9 @@
   display: flex;
   gap: 1rem;
 }
+.genderLink:hover {
+  color: var(--secondaryColor);
+}
 a:global(.active) {
   text-decoration: underline;
 }

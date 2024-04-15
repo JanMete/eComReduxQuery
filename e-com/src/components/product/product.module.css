@@ -1,7 +1,8 @@
-.productContainer img {
+.productImage {
   width: 250px;
   height: 400px;
+  border-radius: var(--roundedBorder);
 }
-.descriptionContainer h3 {
+.productTitle {
   margin: 0.5rem 0;
 }

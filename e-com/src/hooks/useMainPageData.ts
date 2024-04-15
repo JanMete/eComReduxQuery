@@ -4,22 +4,22 @@ import { useNavigate } from 'react-router-dom';
 import { GenderTypes } from '../types/genderTypes';
 import fetchData from '../api/fetchData';
 
-export const useMainPageData = (gender: GenderTypes) => {
+export const useGenderPageData = (gender: GenderTypes) => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
-  const getMainPageData = async () => {
+  const getGenderPageData = async () => {
     const endpointPath = gender ? PATH_TO_ENDPOINT_MAPPING[gender] : '';
     if (endpointPath) {
       const res = await fetchData(endpointPath);
       return res.data;
     } else {
       navigate(`/`);
-      queryClient.invalidateQueries({ queryKey: ['mainPageLoader'] });
+      queryClient.invalidateQueries({ queryKey: ['genderPageLoader'] });
     }
   };
   return useQuery({
-    queryKey: ['mainPageLoader'],
-    queryFn: getMainPageData,
+    queryKey: ['genderPageLoader'],
+    queryFn: getGenderPageData,
   });
 };

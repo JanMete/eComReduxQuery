@@ -5,11 +5,17 @@ export default function CategoryMenu() {
   const params = useParams();
   return (
     <div className={style.categoryMenuMainContainer}>
-      <ul>
+      <ul className={style.categoryMenuList}>
         {CATEGORIES.map((category) => {
           return (
-            <li key={category.categoryName}>
-              <NavLink to={`${params.gender}/${category.path}`}>
+            <li
+              className={style.categoryMenuListItem}
+              key={category.categoryName}
+            >
+              <NavLink
+                className={style.categoryMenuLink}
+                to={`${params.gender}/${category.path}`}
+              >
                 {category.categoryName}
               </NavLink>
             </li>

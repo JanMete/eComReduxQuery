@@ -1,0 +1,7 @@
+.sectionButton {
+  font-size: 4rem;
+  background-color: var(--transparentBlackBackground);
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  color: var(--whiteColor);
+}

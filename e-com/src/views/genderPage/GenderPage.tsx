@@ -3,13 +3,13 @@ import Bestsellers from '../../components/bestsellers/Bestsellers';
 import { GenderTypes } from '../../types/genderTypes';
 import GenderHero from '../../components/genderHero/GenderHero';
 import { useQueryClient } from '@tanstack/react-query';
-import { useMainPageData } from '../../hooks/useMainPageData';
+import { useGenderPageData } from '../../hooks/useMainPageData';
 
 export default function GenderPage() {
   const queryClient = useQueryClient();
   const { gender } = useParams<{ gender: GenderTypes }>();
 
-  const { data, error, isLoading, isError, isSuccess } = useMainPageData(
+  const { data, error, isLoading, isError, isSuccess } = useGenderPageData(
     gender || 'kobieta'
   );
 
@@ -20,7 +20,7 @@ export default function GenderPage() {
     console.error(error.message);
   }
   if (isSuccess) {
-    queryClient.invalidateQueries({ queryKey: ['dataLoader'] });
+    queryClient.invalidateQueries({ queryKey: ['genderPageLoader'] });
   }
 
   const { bestsellers, heroImageUrl } = data;

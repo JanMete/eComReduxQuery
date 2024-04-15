@@ -1,5 +1,11 @@
 :root {
-  --primaryColor: rgb(0, 162, 255);
+  --primaryColor: #efcb00;
+  --secondaryColor: #60c5c5;
+  --whiteColor: #fff;
+  --transparentWhiteBackground: rgba(255, 255, 255, 0.5);
+  --transparentBlackBackground: rgba(0, 0, 0, 0.5);
+  --blackColor: #000000;
+  --roundedBorder: 10px;
 }
 * {
   margin: 0;
@@ -7,7 +13,7 @@
   box-sizing: border-box;
 }
 a {
-  color: black;
+  color: var(--blackColor);
   text-decoration: none;
 }
 ul {

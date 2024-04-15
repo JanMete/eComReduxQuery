@@ -2,7 +2,7 @@
   background-color: var(--primaryColor);
   width: 100%;
 }
-.categoryMenuMainContainer ul {
+.categoryMenuList {
   width: 100%;
   max-width: 100rem;
   margin: 0 auto;
@@ -10,6 +10,9 @@
   display: flex;
   gap: 1rem;
 }
-.categoryMenuMainContainer ul li a {
+.categoryMenuListItem {
   color: white;
+}
+.categoryMenuLink:hover {
+  color: var(--secondaryColor);
 }

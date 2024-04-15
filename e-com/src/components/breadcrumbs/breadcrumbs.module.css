@@ -1,7 +1,7 @@
 .breadcrumbContainer {
   margin-bottom: 1rem;
 }
-.breadcrumbContainer ul {
+.breadcrumbList {
   display: flex;
   gap: 1rem;
 }
