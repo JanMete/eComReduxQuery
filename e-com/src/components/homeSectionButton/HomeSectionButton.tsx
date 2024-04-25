@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom';
 import style from './homeSectionButton.module.css';
+import { FunctionComponent, PropsWithChildren } from 'react';
 
-type HomeSectionButtonProps = {
+interface HomeSectionButtonProps {
   gender: string;
-  children: React.ReactNode;
-};
+}
 
-const HomeSectionButton = ({ gender, children }: HomeSectionButtonProps) => {
+type CombinedProps = PropsWithChildren<HomeSectionButtonProps>;
+
+const HomeSectionButton: FunctionComponent<CombinedProps> = ({
+  gender,
+  children,
+}) => {
   return (
     <Link className={style.sectionButton} to={`/${gender}`}>
       {children}

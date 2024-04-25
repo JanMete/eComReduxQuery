@@ -5,7 +5,9 @@
   --transparentWhiteBackground: rgba(255, 255, 255, 0.5);
   --transparentBlackBackground: rgba(0, 0, 0, 0.5);
   --blackColor: #000000;
-  --roundedBorder: 10px;
+  --roundedCorners: 10px;
+  --greenColor: #1cd122;
+  --redColor: #d11c1c;
 }
 * {
   margin: 0;

@@ -4,6 +4,7 @@ import { GenderTypes } from '../../types/genderTypes';
 import GenderHero from '../../components/genderHero/GenderHero';
 import { useQueryClient } from '@tanstack/react-query';
 import { useGenderPageData } from '../../hooks/useMainPageData';
+import AddedToFavoritePopup from '../../components/addedToFavoritePopup/AddedToFavoritePopup';
 
 export default function GenderPage() {
   const queryClient = useQueryClient();
@@ -27,6 +28,7 @@ export default function GenderPage() {
 
   return (
     <>
+      <AddedToFavoritePopup />
       <GenderHero heroImageUrl={heroImageUrl} />
       <Bestsellers bestsellers={bestsellers} />
     </>

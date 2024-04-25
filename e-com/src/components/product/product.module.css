@@ -1,8 +1,20 @@
 .productImage {
   width: 250px;
   height: 400px;
-  border-radius: var(--roundedBorder);
+  border-radius: var(--roundedCorners);
 }
 .productTitle {
   margin: 0.5rem 0;
+}
+.heartIcon {
+  color: var(--blackColor);
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+.linkContainer {
+  position: relative;
 }

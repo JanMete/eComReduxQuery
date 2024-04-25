@@ -27,3 +27,5 @@ export const { PLN, USD } = currencySlice.actions;
 export const selectCurrency = (state: RootState) => state.currency.currency;
 
 export default currencySlice.reducer;
+//sprawdzić czy nadpisuję cały objekt.
+//W initial state dodać 10 pól i zmienić state, sprawdzić
