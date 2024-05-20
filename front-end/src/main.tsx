@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Favorites from './views/favorites/Favorites.tsx';
+import { deleteFavoriteAction } from './api/deleteFavoriteAction.ts';
 
 const App = lazy(() => import('./App.tsx'));
 const ProductList = lazy(() => import('./views/productList/ProductList.tsx'));
@@ -16,12 +17,15 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
+    path: '/delete-from-favorite/:favoriteId',
+    action: deleteFavoriteAction,
+  },
+  {
     path: '',
     element: <App />,
     children: [
       {
         path: '/',
-
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <HomePage />
@@ -45,7 +49,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: '/favorite',
+        path: '/favorites',
         element: <Favorites />,
       },
     ],

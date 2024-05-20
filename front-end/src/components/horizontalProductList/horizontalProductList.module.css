@@ -1,0 +1,9 @@
+.title {
+  margin-bottom: 0.5rem;
+}
+.horizontalProductListContainer {
+  max-width: 70%;
+  margin: 1rem auto;
+  background-color: var(--grayColor);
+  padding: 1rem;
+}

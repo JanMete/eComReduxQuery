@@ -8,6 +8,8 @@
   --roundedCorners: 10px;
   --greenColor: #1cd122;
   --redColor: #d11c1c;
+  --grayColor: #f4f4f4;
+  --grayTextColor: #7a7a7a;
 }
 * {
   margin: 0;
@@ -20,4 +22,8 @@ a {
 }
 ul {
   list-style-type: none;
+}
+button {
+  border: none;
+  cursor: pointer;
 }

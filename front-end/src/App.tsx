@@ -9,7 +9,8 @@ import Footer from './components/footer/Footer';
 
 export default function App() {
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isHomePageOrFavorites =
+    location.pathname === '/' || location.pathname === '/favorites';
   return (
     <>
       <Header>
@@ -20,7 +21,7 @@ export default function App() {
           <IconsMenu />
         </div>
       </Header>
-      {!isHomePage && <CategoryMenu />}
+      {!isHomePageOrFavorites && <CategoryMenu />}
       <Outlet />
       <Footer />
     </>

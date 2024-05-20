@@ -1,4 +1,3 @@
-// useAddProductToFavorite.js
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 import { BACK_END_URL } from '../constants/api';
@@ -9,9 +8,14 @@ import {
 } from '../redux/addToFavoritePopup';
 
 export const useAddProductToFavorite = () => {
+  const dispatch = useDispatch();
+
   const mutation = useMutation({
     mutationFn: (productId) => {
-      return axios.post(`${BACK_END_URL}/favourites`, { productId });
+      return axios.post(`${BACK_END_URL}/favourites`, {
+        id: Number(productId),
+        productId: Number(productId),
+      });
     },
     onSuccess: () => {
       dispatch(showFavoritePopup());
@@ -20,8 +24,6 @@ export const useAddProductToFavorite = () => {
       }, 2500);
     },
   });
-
-  const dispatch = useDispatch();
 
   const addProductToFavorite = (productId) => {
     mutation.mutate(productId);

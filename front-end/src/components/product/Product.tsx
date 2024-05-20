@@ -1,21 +1,16 @@
 import { Link } from 'react-router-dom';
 import style from './product.module.css';
 import { ProductProps } from '../../types/productProps';
-import { useSelector } from 'react-redux';
-import { CURRENCY } from '../../constants/currency';
-import { RootState } from '../../redux/store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as solidHeart } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { links } from '../../constants/links';
 import { useAddProductToFavorite } from '../../hooks/useAddProductToFavorite';
+import { useCurrency } from '../../hooks/useCurrency';
 
 export default function Product({ product }: ProductProps) {
-  const { currency } = useSelector((state: RootState) => state.currency);
-  const price = currency === 'PLN' ? product.pricePLN : product.priceUSD;
-  const displayCurrency =
-    currency === 'PLN' || currency === 'USD' ? CURRENCY[currency] : '';
+  const { price, displayCurrency } = useCurrency(product);
 
   const [isHeartIconHovered, setIsHeartIconHovered] = useState(false);
   const heartIcon = isHeartIconHovered ? solidHeart : regularHeart;

@@ -5,6 +5,7 @@ import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import style from './iconMenu.module.css';
+import { Link } from 'react-router-dom';
 
 export default function IconsMenu() {
   const [isHeartHovered, setIsHeartHovered] = useState(false);
@@ -13,12 +14,14 @@ export default function IconsMenu() {
   const cartIcon = isCartHovered ? faCartArrowDown : faCartShopping;
   return (
     <div>
-      <FontAwesomeIcon
-        className={style.icon}
-        icon={heartIcon}
-        onMouseEnter={() => setIsHeartHovered(true)}
-        onMouseLeave={() => setIsHeartHovered(false)}
-      />
+      <Link to={'/favorites'}>
+        <FontAwesomeIcon
+          className={style.icon}
+          icon={heartIcon}
+          onMouseEnter={() => setIsHeartHovered(true)}
+          onMouseLeave={() => setIsHeartHovered(false)}
+        />
+      </Link>
       <FontAwesomeIcon
         className={style.icon}
         icon={cartIcon}
