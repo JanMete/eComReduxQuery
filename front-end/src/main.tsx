@@ -5,13 +5,14 @@ import { store } from './redux/store.ts';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Favorites from './views/favorites/Favorites.tsx';
 import { deleteFavoriteAction } from './api/deleteFavoriteAction.ts';
 
 const App = lazy(() => import('./App.tsx'));
 const ProductList = lazy(() => import('./views/productList/ProductList.tsx'));
 const GenderPage = lazy(() => import('./views/genderPage/GenderPage.tsx'));
 const HomePage = lazy(() => import('./views/homePage/HomePage.tsx'));
+const Favorites = lazy(() => import('./views/favorites/Favorites.tsx'));
+const ProductCard = lazy(() => import('./views/productCard/ProductCard.tsx'));
 
 const queryClient = new QueryClient();
 
@@ -50,7 +51,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/favorites',
-        element: <Favorites />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Favorites />,
+          </Suspense>
+        ),
+      },
+      {
+        path: '/:gender/:category/:subcategory/:productId',
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <ProductCard />,
+          </Suspense>
+        ),
       },
     ],
   },

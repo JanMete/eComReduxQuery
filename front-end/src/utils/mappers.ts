@@ -8,3 +8,8 @@ export const MAP_GENDER_NAME = {
   mezczyzna: 'Mężczyzna',
   dziecko: 'Dziecko',
 };
+export const MAP_TO_POLISH_GENDER = {
+  women: 'kobieta',
+  men: 'mezczyzna',
+  children: 'dziecko',
+};

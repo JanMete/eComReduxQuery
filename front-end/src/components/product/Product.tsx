@@ -5,9 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as solidHeart } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import { links } from '../../constants/links';
 import { useAddProductToFavorite } from '../../hooks/useAddProductToFavorite';
 import { useCurrency } from '../../hooks/useCurrency';
+import {
+  MAP_TO_POLISH_GENDER,
+  PATH_TO_ENDPOINT_MAPPING,
+} from '../../utils/mappers';
 
 export default function Product({ product }: ProductProps) {
   const { price, displayCurrency } = useCurrency(product);
@@ -26,7 +29,11 @@ export default function Product({ product }: ProductProps) {
         className={style.heartIcon}
         icon={heartIcon}
       />
-      <Link to={links.kobieta}>
+      <Link
+        to={`/${MAP_TO_POLISH_GENDER[product.gender]}/${product.category}/${
+          product.subcategory
+        }/${product.id}`}
+      >
         <div>
           <img
             className={style.productImage}

@@ -10,9 +10,8 @@ type HorizontalProductListTypes = {
 export default function HorizontalProductList({
   title,
 }: HorizontalProductListTypes) {
-  const { data } = useFavoritesData();
+  const { data: productsData } = useFavoritesData();
 
-  const productsData = data?.data;
   const products = productsData
     ? productsData.map((entry: { product: ProductTypes }) => entry.product)
     : [];
