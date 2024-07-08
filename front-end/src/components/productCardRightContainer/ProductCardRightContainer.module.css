@@ -1,0 +1,33 @@
+.rightContainer {
+  width: 100%;
+}
+.cartButton {
+  width: 100%;
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  padding: 0.7rem 0;
+  margin: 1rem 0;
+}
+.priceParagraph {
+  color: var(--redColor);
+  font-size: 1.5rem;
+}
+.attributeContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+.attributesContainer {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.categoryHeader {
+  margin: 0.4rem 0;
+}
+.productCardDetailsContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
