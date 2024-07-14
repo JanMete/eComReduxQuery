@@ -1,13 +1,23 @@
 import { ProductProps } from '../../types/productProps';
 import style from './horizontalProduct.module.css';
 import { useCurrency } from '../../hooks/useCurrency';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX, faBagShopping } from '@fortawesome/free-solid-svg-icons';
-import { useFetcher } from 'react-router-dom';
+import { useFetcher, useLocation } from 'react-router-dom';
+import ProductButton from '../productButton/ProductButton';
+import { useContext } from 'react';
+import { cartContext } from '../../contexts/cartProductsContext';
 
 export default function HorizontalProduct({ product }: ProductProps) {
   const { price, displayCurrency } = useCurrency(product);
   const { Form } = useFetcher();
+  const context = useContext(cartContext);
+  if (!context) {
+    throw new Error('Cart context is not provided');
+  }
+  const { removeProductFromCart, addProductToCart } = context;
+
+  const location = useLocation();
+  const isFavorite = location.pathname === '/favorites';
 
   //Ogarnąć zoda walidację
 
@@ -37,14 +47,21 @@ export default function HorizontalProduct({ product }: ProductProps) {
         </div>
         <div className={style.buttonsContainer}>
           <Form method='DELETE' action={`/delete-from-favorite/${product.id}`}>
-            <button>
-              {/* Zrobić komponent ze stylami */}
-              <FontAwesomeIcon icon={faX} /> Usuń
-            </button>
+            <ProductButton
+              onclick={() => removeProductFromCart(product)}
+              icon={faX}
+            >
+              Usuń
+            </ProductButton>
           </Form>
-          <button>
-            <FontAwesomeIcon icon={faBagShopping} /> Dodaj do koszyka
-          </button>
+          {isFavorite && (
+            <ProductButton
+              icon={faBagShopping}
+              onclick={() => addProductToCart(product)}
+            >
+              Dodaj do koszyka
+            </ProductButton>
+          )}
         </div>
       </div>
     </div>

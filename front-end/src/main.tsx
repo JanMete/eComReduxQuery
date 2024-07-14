@@ -13,6 +13,7 @@ const GenderPage = lazy(() => import('./views/genderPage/GenderPage.tsx'));
 const HomePage = lazy(() => import('./views/homePage/HomePage.tsx'));
 const Favorites = lazy(() => import('./views/favorites/Favorites.tsx'));
 const ProductCard = lazy(() => import('./views/productCard/ProductCard.tsx'));
+const Cart = lazy(() => import('./views/cart/Cart.tsx'));
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <ProductCard />,
+          </Suspense>
+        ),
+      },
+      {
+        path: '/cart',
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Cart />,
           </Suspense>
         ),
       },

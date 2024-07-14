@@ -1,13 +1,6 @@
 .rightContainer {
   width: 100%;
 }
-.cartButton {
-  width: 100%;
-  background-color: var(--blackColor);
-  color: var(--whiteColor);
-  padding: 0.7rem 0;
-  margin: 1rem 0;
-}
 .priceParagraph {
   color: var(--redColor);
   font-size: 1.5rem;

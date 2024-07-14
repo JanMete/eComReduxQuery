@@ -1,0 +1,6 @@
+.productButton {
+  display: flex;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}

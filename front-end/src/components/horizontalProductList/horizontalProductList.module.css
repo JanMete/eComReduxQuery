@@ -3,7 +3,7 @@
 }
 .horizontalProductListContainer {
   max-width: 70%;
-  margin: 1rem auto;
+  min-width: 700px;
   background-color: var(--grayColor);
   padding: 1rem;
 }

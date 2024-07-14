@@ -22,12 +22,14 @@ export default function IconsMenu() {
           onMouseLeave={() => setIsHeartHovered(false)}
         />
       </Link>
-      <FontAwesomeIcon
-        className={style.icon}
-        icon={cartIcon}
-        onMouseEnter={() => setIsCartHovered(true)}
-        onMouseLeave={() => setIsCartHovered(false)}
-      />
+      <Link to={'/cart'}>
+        <FontAwesomeIcon
+          className={style.icon}
+          icon={cartIcon}
+          onMouseEnter={() => setIsCartHovered(true)}
+          onMouseLeave={() => setIsCartHovered(false)}
+        />
+      </Link>
     </div>
   );
 }

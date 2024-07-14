@@ -1,0 +1,8 @@
+.cartButton {
+  width: 100%;
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  padding: 0.5rem 0;
+  text-align: center;
+  cursor: pointer;
+}
