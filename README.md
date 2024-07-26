@@ -6,20 +6,20 @@ This is an e-commerce application built using Vite. The project includes several
 Dependencies
 Below is a list of dependencies used in this project along with their versions:
 
-@fortawesome/fontawesome-svg-core: ^6.5.1
-@fortawesome/free-brands-svg-icons: ^6.5.1
-@fortawesome/free-regular-svg-icons: ^6.5.1
-@fortawesome/free-solid-svg-icons: ^6.5.1
-@fortawesome/react-fontawesome: ^0.2.0
-@react-spring/parallax: ^9.7.3
-@reduxjs/toolkit: ^2.2.2
-@tanstack/react-query: ^5.28.9
-axios: ^1.6.8
-json-server: ^1.0.0-beta.0
-react: ^18.2.0
-react-dom: ^18.2.0
-react-redux: ^9.1.0
-react-router-dom: ^6.22.3
+- @fortawesome/fontawesome-svg-core: ^6.5.1
+- @fortawesome/free-brands-svg-icons: ^6.5.1
+- @fortawesome/free-regular-svg-icons: ^6.5.1
+- @fortawesome/free-solid-svg-icons: ^6.5.1
+- @fortawesome/react-fontawesome: ^0.2.0
+- @react-spring/parallax: ^9.7.3
+- @reduxjs/toolkit: ^2.2.2
+- @tanstack/react-query: ^5.28.9
+- axios: ^1.6.8
+- json-server: ^1.0.0-beta.0
+- react: ^18.2.0
+- react-dom: ^18.2.0
+- react-redux: ^9.1.0
+- react-router-dom: ^6.22.3
 
 Features:
 
