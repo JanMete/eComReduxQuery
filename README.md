@@ -23,14 +23,9 @@ Below is a list of dependencies used in this project along with their versions:
 
 Features:
 
-State Management:
 - Redux Toolkit: Used for managing the global state of the application efficiently.
 - React Redux: Provides React bindings for Redux to connect React components to the Redux store.
-API Interaction:
 - Axios: Handles HTTP requests to fetch data from the local API server.
-Data Fetching:
 - React Query: Simplifies data fetching and caching within the application.
-Routing:
 - React Router DOM: Manages the application's navigation and routing.
-Icons:
 - FontAwesome: Provides a collection of free icons for use within the application.
